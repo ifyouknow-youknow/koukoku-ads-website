@@ -1,0 +1,45 @@
+.dialog-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 10000;
+    box-sizing: border-box;
+}
+
+.dialog {
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.dialog-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dialog-message {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dialog-btn {
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 100px;
+    color: white;
+}
+
+.dialog-cancel-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 100px;
+}

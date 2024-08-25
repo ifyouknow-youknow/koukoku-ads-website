@@ -1,0 +1,141 @@
+@media (max-width: 500px) {
+    .dashnav-burger {
+        background-color: black;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+        right: 0px;
+        top: 10px;
+    }
+
+    .dashnav-burger-icon {
+        color: white;
+        font-size: 22px;
+        vertical-align: middle;
+    }
+
+    .dashnav-body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 9000;
+    }
+
+    .dashnav-close {
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: auto;
+    }
+
+    .dashnav-close-icon {
+        color: black;
+        font-size: 20px;
+    }
+
+    .dashnav-body-links {
+        background-color: black;
+        padding: 1em 1em 1em 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .dashnav-body-link {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .dashnav-link-icon {
+        color: white;
+        font-size: 22px;
+
+    }
+
+    .dashnav-create {
+        background-color: red;
+        color: white;
+        padding: 10px 16px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+}
+
+@media (min-width: 500px) {
+    .dashnav-burger {
+        background-color: black;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+        right: 0px;
+        top: 10px;
+    }
+
+    .dashnav-burger-icon {
+        color: white;
+        font-size: 22px;
+        vertical-align: middle;
+    }
+
+    .dashnav-body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 9000;
+    }
+
+    .dashnav-close {
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: auto;
+    }
+
+    .dashnav-close-icon {
+        color: black;
+        font-size: 20px;
+    }
+
+    .dashnav-body-links {
+        background-color: black;
+        padding: 1em 1em 1em 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .dashnav-body-link {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .dashnav-link-icon {
+        color: white;
+        font-size: 22px;
+
+    }
+
+    .dashnav-create {
+        background-color: red;
+        color: white;
+        padding: 10px 16px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+}

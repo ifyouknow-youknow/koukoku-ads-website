@@ -1,0 +1,503 @@
+@media (max-width: 500px) {
+    .create-title {
+        font-weight: 400;
+        font-size: 23px;
+        padding-left: 1em;
+
+    }
+
+    .create-desc {
+        padding: 1em;
+        background-color: #F6F8FA;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2em;
+    }
+
+    .create-upload-wrap {}
+
+    .create-upload-1-1 {
+        background-color: #262835;
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-1 {
+        background-color: #262835;
+        width: 200px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-2 {
+        background-color: #262835;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .create-icon {
+        color: white;
+        font-size: 50px;
+    }
+
+    .create-label {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .create-step {
+        font-size: 20px;
+        font-weight: 500;
+        background-color: black;
+        width: fit-content;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .create-options-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .create-options {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .create-option {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .create-option-chosen {
+        background-color: black;
+        color: white;
+    }
+
+    .create-note-wrap {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        margin: 1em;
+        position: relative;
+    }
+
+    .create-note {
+        font-size: 14px;
+    }
+
+    .create-note-icon {
+        color: red;
+        font-size: 30px;
+        position: absolute;
+        transform: translate(-10px, -30px);
+        left: 0;
+    }
+
+    .create-views-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .create-pay {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 100px;
+    }
+
+    .create-checktext {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .create-sub {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .create-caption {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .create-form {
+        padding: 1em;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+    .create-title {
+        font-weight: 400;
+        font-size: 23px;
+        padding-left: 1em;
+
+    }
+
+    .create-desc {
+        padding: 1em;
+        background-color: #F6F8FA;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2em;
+    }
+
+    .create-upload-wrap {}
+
+    .create-upload-1-1 {
+        background-color: #262835;
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-1 {
+        background-color: #262835;
+        width: 200px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-2 {
+        background-color: #262835;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .create-icon {
+        color: white;
+        font-size: 50px;
+    }
+
+    .create-label {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .create-step {
+        font-size: 20px;
+        font-weight: 500;
+        background-color: black;
+        width: fit-content;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .create-options-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .create-options {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .create-option {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .create-option-chosen {
+        background-color: black;
+        color: white;
+    }
+
+    .create-note-wrap {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        margin: 1em;
+        position: relative;
+    }
+
+    .create-note {
+        font-size: 14px;
+    }
+
+    .create-note-icon {
+        color: red;
+        font-size: 30px;
+        position: absolute;
+        transform: translate(-10px, -30px);
+        left: 0;
+    }
+
+    .create-views-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .create-pay {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 100px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+    .create-title {
+        font-weight: 400;
+        font-size: 23px;
+        padding-left: 1em;
+
+    }
+
+    .create-desc {
+        padding: 1em;
+        background-color: #F6F8FA;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2em;
+    }
+
+    .create-upload-wrap {}
+
+    .create-upload-1-1 {
+        background-color: #262835;
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-1 {
+        background-color: #262835;
+        width: 200px;
+        height: 100px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-2 {
+        background-color: #262835;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .create-icon {
+        color: white;
+        font-size: 50px;
+    }
+
+    .create-label {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .create-step {
+        font-size: 20px;
+        font-weight: 500;
+        background-color: black;
+        width: fit-content;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .create-options-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .create-options {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .create-option {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .create-option-chosen {
+        background-color: black;
+        color: white;
+    }
+
+    .create-note-wrap {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        margin: 1em;
+        position: relative;
+    }
+
+    .create-note {
+        font-size: 14px;
+    }
+
+    .create-note-icon {
+        color: red;
+        font-size: 30px;
+        position: absolute;
+        transform: translate(-10px, -30px);
+        left: 0;
+    }
+
+    .create-views-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .create-pay {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 100px;
+    }
+}
+
+@media (min-width: 701px) {
+    .create-title {
+        font-weight: 400;
+        font-size: 23px;
+        padding-left: 1em;
+
+    }
+
+    .create-desc {
+        padding: 1em;
+        background-color: #F6F8FA;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2em;
+    }
+
+    .create-upload-wrap {}
+
+    .create-upload-1-1 {
+        background-color: #262835;
+        width: 175px;
+        height: 175px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-1 {
+        background-color: #262835;
+        width: 350px;
+        height: 175px;
+        border-radius: 8px;
+    }
+
+    .create-upload-2-2 {
+        background-color: #262835;
+        width: 350px;
+        height: 350px;
+        border-radius: 8px;
+    }
+
+    .create-icon {
+        color: white;
+        font-size: 50px;
+    }
+
+    .create-label {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .create-step {
+        font-size: 20px;
+        font-weight: 500;
+        background-color: black;
+        width: fit-content;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .create-options-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        min-height: 400px;
+    }
+
+    .create-options {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .create-option {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .create-option-chosen {
+        background-color: black;
+        color: white;
+    }
+
+    .create-note-wrap {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        max-width: 400px;
+        margin: 1em;
+        position: relative;
+    }
+
+    .create-note {
+        font-size: 14px;
+    }
+
+    .create-note-icon {
+        color: red;
+        font-size: 30px;
+        position: absolute;
+        transform: translate(-10px, -30px);
+        left: 0;
+    }
+
+    .create-views-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .create-pay {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 100px;
+    }
+}

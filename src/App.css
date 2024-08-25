@@ -1,38 +1,160 @@
-.App {
+/* MAIN STYLES */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  opacity: 0.8;
+}
+
+.main {
+  min-height: 92vh;
+}
+
+.center {
+  width: 100%;
+  align-self: center;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.vertical-center {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.horizontal-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.label {
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.textfield {
+  background-color: #F6F8FA;
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+}
+
+.dropdown {
+  background-color: #F6F8FA;
+  padding: 10px;
+  box-sizing: border-box;
+  /* width: 100%; */
+  border: 0;
+  border-radius: 8px;
+
+}
+
+.datepicker {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  background-color: #F6F8FA;
+  border-radius: 8px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.separate-h {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.separate-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.p {
+  padding: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.p-l {
+  padding-left: 1em;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.xsmall-text {
+  font-size: 10px;
+}
+
+.small-text {
+  font-size: 12px;
 }
