@@ -500,4 +500,18 @@
         padding: 10px 20px;
         border-radius: 100px;
     }
+    .create-checktext {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .create-form{
+        max-width: 500px;
+    }
+    .create-sub {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .create-caption {
+        font-size: 14px;
+    }
 }
