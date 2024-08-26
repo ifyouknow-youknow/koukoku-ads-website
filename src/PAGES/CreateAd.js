@@ -11,8 +11,9 @@ import { Loading } from './UTILITIES/Loading'
 import { Dialog } from './UTILITIES/Dialog'
 import { server_GET, server_POST } from '../server'
 import { useNavigate } from 'react-router-dom'
-import { FaCheck } from "react-icons/fa";
 import { Checkbox } from './UTILITIES/Checkbox'
+import { auth_CheckSignedIn, firebase_GetDocument, storage_UploadMedia } from '../firebase'
+import { randomString } from '../functions'
 
 export function CreateAd() {
     const navigate = useNavigate();
@@ -23,6 +24,7 @@ export function CreateAd() {
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
     const [isCoupon, setIsCoupon] = useState(false);
+    const [isRepeating, setIsRepeating] = useState(false);
 
 
     function onChooseImage(event) {
@@ -36,38 +38,60 @@ export function CreateAd() {
             reader.readAsDataURL(file);
         }
     }
-    async function onSubmitReview() {
-        setShowDialog(false);
-        setLoading(true);
-        const views = parseInt(document.querySelector('#ddViews').value.split(" ")[0]);
-        console.log(views);
-        const body = {
-            amount: views * (chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 4 : 5),
-            currency: 'jpy',
-            itemName: `${views} views`,
-            itemDescription: `${chosenOption} ad.`,
-            userId: '12341234'
-        }
-        const res = await server_POST('create-payment-link', body);
-        console.log(res);
-        setLoading(false);
-        // MAYBE CHANGE TO ADS
-        navigate('/dashboard')
-        window.open(`${res.url}`, "_blank")
-
-    }
-
     const handleOptionClick = (option) => {
 
         setChosenOption(option);
     }
-
     const handleUploadClick = () => {
         fileInputRef.current.click();
     }
+    // 
+    async function onSubmitReview() {
+        setShowDialog(false);
+        setLoading(true);
+        const views = parseInt(document.querySelector('#ddViews').value.split(" ")[0]);
+        var expDate = "";
+        if (document.querySelector("#dpExpiration") != null) {
+            expDate = new Date(document.querySelector("#dpExpiration").value.replaceAll("-", "/"))
+        }
+        const imagePath = `Images/${randomString(12)}.jpg`
+        storage_UploadMedia(chosenImage, imagePath, async (success) => {
+            if (success) {
+                const body = {
+                    amount: views * (chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 4 : 5),
+                    currency: 'jpy',
+                    itemName: `${views} views`,
+                    itemDescription: `${chosenOption} ad.`,
+                    args: {
+                        userId: me.id,
+                        views: parseInt(views),
+                        chosenOption: chosenOption,
+                        imagePath: imagePath,
+                        date: parseInt(Date.now()),
+                        isCoupon: Boolean(isCoupon),
+                        expDate: parseInt(expDate.getTime()),
+                        isRepeating: Boolean(isRepeating)
+                    }
+                }
+                // 
+                console.log(body)
+                const res = await server_POST('create-payment-link', body);
+                console.log(res);
+                setLoading(false);
+                // MAYBE CHANGE TO ADS
+                navigate('/dashboard')
+                window.open(`${res.url}`, "_blank")
+            }
+        });
+    }
 
     useEffect(() => {
-        server_GET('greeting')
+        window.scrollTo(0, 0)
+        auth_CheckSignedIn((person) => {
+            firebase_GetDocument('KoukokuAds_Businesses', person.id, (userDoc) => {
+                setMe(userDoc);
+            })
+        }, navigate)
     }, [])
 
 
@@ -236,6 +260,11 @@ export function CreateAd() {
                         <Spacer height={20} />
                         <p className='create-sub'>Frequency</p>
                         <p className='create-caption'>By default, the coupon will be allowed to be scanned only one time. Checking the box below will allow multiple redemptions throughout its lifespan. You will have record of how many times the customer scans coupon.</p>
+                        <Spacer height={10} />
+                        <div className='h'>
+                            <Checkbox onChange={(checked) => { setIsRepeating(checked) }} backgroundColor={"black"} />
+                            <h1 className='create-checktext'>Allow customers to repeatedly use coupon.</h1>
+                        </div>
                     </div>
                 </div>}
 
