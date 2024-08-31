@@ -69,7 +69,7 @@ export function CreateAd() {
                         imagePath: imagePath,
                         date: parseInt(Date.now()),
                         isCoupon: Boolean(isCoupon),
-                        expDate: parseInt(expDate.getTime()),
+                        expDate: isCoupon ? parseInt(expDate.getTime()) : 0,
                         isRepeating: Boolean(isRepeating)
                     }
                 }
