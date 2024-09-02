@@ -59,7 +59,7 @@ export function DashNavigation() {
                     }}>
                         <div className='h'>
                             <p className='dashnav-body-link'>
-                                Subscribers
+                                Campaigns
                             </p>
                             {/* <FaArrowRight className='dashnav-link-icon' /> */}
                         </div>
@@ -68,11 +68,11 @@ export function DashNavigation() {
                 <div className='p-l'>
                     <Clickable onPress={() => {
                         setToggle(false);
-                        navigate('/dashboard');
+                        navigate('/notifications');
                     }}>
                         <div className='h'>
                             <p className='dashnav-body-link'>
-                                Account
+                                Notifications
                             </p>
                             {/* <FaArrowRight className='dashnav-link-icon' /> */}
                         </div>

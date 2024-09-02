@@ -7,8 +7,9 @@ import {
 import { Home } from './PAGES/Home';
 import './App.css'
 import { Login } from './PAGES/Login';
-import { Dashboard } from './PAGES/Dashboard';
 import { CreateAd } from './PAGES/CreateAd';
+import Notifications from './PAGES/Notifications';
+import Campaigns from './PAGES/Campaigns';
 
 const router = createBrowserRouter([
   {
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/dashboard",
-    element: <Dashboard />,
+    path: "/campaigns",
+    element: <Campaigns />,
   },
   {
     path: "/create-ad",
     element: <CreateAd />,
+  },
+  {
+    path: "/notifications",
+    element: <Notifications />,
   },
 ]);
 

@@ -74,12 +74,10 @@ export function CreateAd() {
                     }
                 }
                 // 
-                console.log(body)
                 const res = await server_POST('create-payment-link', body);
-                console.log(res);
                 setLoading(false);
                 // MAYBE CHANGE TO ADS
-                navigate('/dashboard')
+                navigate('/campaigns')
                 window.open(`${res.url}`, "_blank")
             }
         });
