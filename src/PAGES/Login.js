@@ -27,7 +27,7 @@ export function Login() {
         auth_SignIn(email, password, (success) => {
             setLoading(false);
             if (success) {
-                navigate('/dashboard');
+                navigate('/campaigns');
             }
         })
     }

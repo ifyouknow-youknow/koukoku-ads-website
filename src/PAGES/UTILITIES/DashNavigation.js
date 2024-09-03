@@ -15,7 +15,7 @@ export function DashNavigation() {
 
     return <div>
         <div className='separate-h'>
-            <img src={logo} className='nav-logo' />
+            <Clickable onPress={() => { navigate('/campaigns') }}><img src={logo} className='nav-logo' /></Clickable>
             <Clickable onPress={() => { setToggle(true) }}>
                 <div className='dashnav-burger'>
                     <GiHamburgerMenu className='dashnav-burger-icon' />
@@ -39,19 +39,6 @@ export function DashNavigation() {
                         <TbPlanet className='dashnav-link-icon' />
                     </div>
                 </Clickable>
-                <div className='p-l'>
-                    <Clickable onPress={() => {
-                        setToggle(false);
-                        navigate('/dashboard');
-                    }}>
-                        <div className='h'>
-                            <p className='dashnav-body-link'>
-                                Dashboard
-                            </p>
-                            {/* <FaArrowRight className='dashnav-link-icon' /> */}
-                        </div>
-                    </Clickable>
-                </div>
                 <div className='p-l'>
                     <Clickable onPress={() => {
                         setToggle(false);
