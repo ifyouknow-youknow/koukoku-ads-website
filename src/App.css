@@ -94,7 +94,7 @@ p {
   padding: 10px;
   min-width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #F6F8FA;
   border-radius: 8px;
 }
@@ -132,6 +132,11 @@ p {
 }
 
 .p-l {
+  padding-left: 1em;
+}
+
+.p-h {
+  padding-right: 1em;
   padding-left: 1em;
 }
 

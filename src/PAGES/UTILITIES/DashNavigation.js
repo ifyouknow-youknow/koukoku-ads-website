@@ -42,7 +42,7 @@ export function DashNavigation() {
                 <div className='p-l'>
                     <Clickable onPress={() => {
                         setToggle(false);
-                        navigate('/dashboard');
+                        navigate('/campaigns');
                     }}>
                         <div className='h'>
                             <p className='dashnav-body-link'>
