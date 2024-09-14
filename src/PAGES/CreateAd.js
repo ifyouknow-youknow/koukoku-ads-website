@@ -70,7 +70,8 @@ export function CreateAd() {
                         date: parseInt(Date.now()),
                         isCoupon: Boolean(isCoupon),
                         expDate: isCoupon ? parseInt(expDate.getTime()) : 0,
-                        isRepeating: Boolean(isRepeating)
+                        isRepeating: Boolean(isRepeating),
+                        geohash: me.geohash
                     }
                 }
                 // 
