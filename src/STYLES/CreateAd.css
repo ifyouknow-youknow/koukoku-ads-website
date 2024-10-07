@@ -136,6 +136,11 @@
     .create-form {
         padding: 1em;
     }
+
+    .create-map {
+        max-width: 700px;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 501px) and (max-width: 600px) {
@@ -257,6 +262,11 @@
         padding: 10px 20px;
         border-radius: 100px;
     }
+
+    .create-map {
+        max-width: 700px;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 700px) {
@@ -377,6 +387,11 @@
         color: white;
         padding: 10px 20px;
         border-radius: 100px;
+    }
+
+    .create-map {
+        max-width: 700px;
+        margin: 0 auto;
     }
 }
 
@@ -517,5 +532,10 @@
 
     .create-caption {
         font-size: 14px;
+    }
+
+    .create-map {
+        max-width: 700px;
+        margin: 0 auto;
     }
 }
