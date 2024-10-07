@@ -10,6 +10,7 @@ import { Login } from './PAGES/Login';
 import { CreateAd } from './PAGES/CreateAd';
 import Notifications from './PAGES/Notifications';
 import Campaigns from './PAGES/Campaigns';
+import { Signup } from './PAGES/Signup';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
   },
   {
     path: "/campaigns",

@@ -1,119 +1,151 @@
 @media (max-width: 500px) {
     .camp-wrap {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 10px;
-        background-color: rgba(0, 0, 0, 0.05);
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .camp-wrap>div:not(:last-child) {
-        border-bottom: 1px solid #cbc9c9;
     }
 
     .camp-block {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
+        background-color: #F6F8FA;
+        padding: 1em;
     }
 
     .camp-title {
-        font-size: 20px;
-        font-weight: 500;
-        color: red;
-        letter-spacing: -1px;
-    }
-
-    .camp-pair {
-        background-color: aqua;
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .camp-text {
-        font-size: 13px;
+        font-size: 26px;
+        font-weight: 600;
+        color: #4F49FF;
     }
 
     .camp-icon-pair {
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 4px 8px;
-        border-radius: 10px;
         position: relative;
-        width: fit-content;
-        margin-left: auto;
-        margin-bottom: 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
     }
 
     .camp-icon {
-        color: red;
         position: absolute;
-        transform: translate(-14px, -14px);
+        right: 0;
+        font-size: 24px;
+        transform: translate(10px, -20px);
+        color: #4F49FF;
+    }
+
+    .camp-text {
+        font-size: 14px;
+    }
+
+    .camp-active {
+        font-size: 14px;
+        padding: 5px 12px;
+        background-color: #56f251;
+        color: black;
+        height: fit-content;
+        border-radius: 100px;
+        font-size: 12px;
     }
 
     .camp-exp {
+        font-size: 12px;
+    }
+
+    .button-reactivate {
+        font-size: 14px;
+        padding: 5px 12px;
+        background-color: #4F49FF;
+        color: white;
+        height: fit-content;
+        border-radius: 100px;
+        font-size: 12px;
+    }
+
+    .camp-remove {
+        background-color: #FF1F54;
+        padding: 6px 12px;
+        width: fit-content;
+        color: white;
+        border-radius: 100px;
         font-size: 12px;
     }
 }
 
 @media (min-width: 500px) {
     .camp-wrap {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
         gap: 10px;
-        background-color: rgba(0, 0, 0, 0.05);
-        padding-top: 10px;
-        padding-bottom: 10px;
         margin: 0 auto;
-        width: 700px;
-    }
-
-    .camp-wrap>div:not(:last-child) {
-        border-bottom: 1px solid #cbc9c9;
     }
 
     .camp-block {
+        background-color: #F6F8FA;
+        padding: 1em;
         display: flex;
-        flex-direction: row;
-        gap: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .camp-block-img {
+        display: block;
     }
 
     .camp-title {
-        font-size: 20px;
-        font-weight: 500;
-        color: red;
-        letter-spacing: -1px;
-    }
-
-    .camp-pair {
-        background-color: aqua;
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .camp-text {
-        font-size: 13px;
+        font-size: 26px;
+        font-weight: 600;
+        color: #4F49FF;
     }
 
     .camp-icon-pair {
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 4px 8px;
-        border-radius: 10px;
         position: relative;
-        width: fit-content;
-        margin-left: auto;
-        margin-bottom: 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
     }
 
     .camp-icon {
-        color: red;
         position: absolute;
-        transform: translate(-14px, -14px);
+        right: 0;
+        font-size: 24px;
+        transform: translate(10px, -20px);
+        color: #4F49FF;
+    }
+
+    .camp-text {
+        font-size: 14px;
+    }
+
+    .camp-active {
+        font-size: 14px;
+        padding: 5px 12px;
+        background-color: #56f251;
+        color: black;
+        height: fit-content;
+        border-radius: 100px;
+        font-size: 12px;
     }
 
     .camp-exp {
+        font-size: 12px;
+    }
+
+    .button-reactivate {
+        font-size: 14px;
+        padding: 5px 12px;
+        background-color: #4F49FF;
+        color: white;
+        height: fit-content;
+        border-radius: 100px;
+        font-size: 12px;
+    }
+
+    .camp-remove {
+        background-color: #FF1F54;
+        padding: 6px 12px;
+        width: fit-content;
+        color: white;
+        border-radius: 100px;
         font-size: 12px;
     }
 }

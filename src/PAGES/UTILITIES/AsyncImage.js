@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { storage_DownloadMedia } from "../../firebase";
 
-export function AsyncImage({ imagePath, width, height, radius }) {
+export function AsyncImage({ imagePath, width, height, radius, objectFit }) {
     const [url, setUrl] = useState(null);
     useEffect(() => {
         if (imagePath) {
@@ -17,10 +17,10 @@ export function AsyncImage({ imagePath, width, height, radius }) {
                     <img
                         src={url}
                         style={{
-                            width: width,
-                            height: height,
+                            width: width != undefined ? width : '100%',
+                            height: height != undefined ? height : '100%',
                             borderRadius: radius !== undefined ? radius : 10,
-                            objectFit: "cover",
+                            objectFit: objectFit != undefined ? objectFit : 'cover',
                         }}
                     />
                 </div>

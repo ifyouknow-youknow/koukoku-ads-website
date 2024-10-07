@@ -26,6 +26,16 @@ export function CreateAd() {
     const [isCoupon, setIsCoupon] = useState(false);
     const [isRepeating, setIsRepeating] = useState(false);
 
+    const size1Cost = 0.02;
+    const size2Cost = 0.04;
+    const size3Cost = 0.07;
+
+    const viewOptions = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000];
+    const getCost = (views) => {
+        const costPerView = chosenOption === "1 x 1" ? size1Cost : chosenOption === "2 x 1" ? size2Cost : size3Cost;
+        return (costPerView * views).toFixed(2);
+    };
+
 
     function onChooseImage(event) {
         console.log('File input event:', event);
@@ -58,8 +68,8 @@ export function CreateAd() {
         storage_UploadMedia(chosenImage, imagePath, async (success) => {
             if (success) {
                 const body = {
-                    amount: views * (chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 4 : 5),
-                    currency: 'jpy',
+                    amount: views * (chosenOption === "1 x 1" ? size1Cost : chosenOption === "2 x 1" ? size2Cost : size3Cost) * 100,
+                    currency: 'usd',
                     itemName: `${views} views`,
                     itemDescription: `${chosenOption} ad.`,
                     args: {
@@ -83,6 +93,8 @@ export function CreateAd() {
             }
         });
     }
+
+
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -121,19 +133,19 @@ export function CreateAd() {
                         <Clickable onPress={() => handleOptionClick("1 x 1")}>
                             <div className={`create-option text-center no-wrap ${chosenOption === "1 x 1" ? 'create-option-chosen' : ''}`}>
                                 <p>1 x 1</p>
-                                <p className='xsmall-text'>( 2 ¥ )</p>
+                                <p className='xsmall-text'>( ${size1Cost.toString()} )</p>
                             </div>
                         </Clickable>
                         <Clickable onPress={() => handleOptionClick("2 x 1")}>
                             <div className={`create-option text-center no-wrap ${chosenOption === "2 x 1" ? 'create-option-chosen' : ''}`}>
                                 <p>2 x 1</p>
-                                <p className='xsmall-text'>( 3 ¥ )</p>
+                                <p className='xsmall-text'>( ${size2Cost.toString()} )</p>
                             </div>
                         </Clickable>
                         <Clickable onPress={() => handleOptionClick("2 x 2")}>
                             <div className={`create-option text-center no-wrap ${chosenOption === "2 x 2" ? 'create-option-chosen' : ''}`}>
                                 <p>2 x 2</p>
-                                <p className='xsmall-text'>( 5 ¥ )</p>
+                                <p className='xsmall-text'>( ${size3Cost.toString()} )</p>
                             </div>
                         </Clickable>
                     </div>
@@ -193,33 +205,11 @@ export function CreateAd() {
                 </div>
                 <div className='horizontal-center'>
                     <select id='ddViews' className='dropdown'>
-                        <option>
-                            100 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 100} ¥
-                        </option>
-                        <option>
-                            250 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 250} ¥
-                        </option>
-                        <option>
-                            500 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 500} ¥
-                        </option>
-                        <option>
-                            750 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 750} ¥
-                        </option>
-                        <option>
-                            1000 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 1000} ¥
-                        </option>
-                        <option>
-                            1250 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 1250} ¥
-                        </option>
-                        <option>
-                            1500 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 1500} ¥
-                        </option>
-                        <option>
-                            1750 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 1750} ¥
-                        </option>
-                        <option>
-                            2000 views -  {(chosenOption === "1 x 1" ? 2 : chosenOption === "2 x 1" ? 3 : 5) * 2000} ¥
-                        </option>
+                        {viewOptions.map((views) => (
+                            <option key={views}>
+                                {`${views} views - $${getCost(views)}`}
+                            </option>
+                        ))}
                     </select>
                 </div>
 

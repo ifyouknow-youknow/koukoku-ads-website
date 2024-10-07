@@ -1,5 +1,5 @@
 import '../../STYLES/Footer.css'
-import logo from '../../IMAGES/kokoku-ads-logo.png'
+import logo from '../../IMAGES/koukoku-ads-logo.png'
 import { Clickable } from './Clickable'
 
 export function Footer() {

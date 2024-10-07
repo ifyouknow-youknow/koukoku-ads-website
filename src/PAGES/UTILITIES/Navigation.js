@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import logo from '../../IMAGES/kokoku-ads-logo.png'
+import logo from '../../IMAGES/koukoku-ads-logo.png'
 import '../../STYLES/Navigation.css'
 import { Clickable } from './Clickable'
 
@@ -14,7 +14,7 @@ export function Navigation() {
         <div className='nav-top-right'>
             <button className='nav-link pointer poppins'>Docs</button>
             <button onClick={() => { navigate('/login') }} className='nav-link-login bg-black pointer poppins'>Login</button>
-            <button onClick={() => { navigate('/signup') }} className='nav-link-login bg-red pointer poppins'>Sign Up</button>
+            <button onClick={() => { navigate('/signup') }} className='nav-link-login bg-blue pointer poppins'>Sign Up</button>
         </div>
     </div>
 }
