@@ -73,7 +73,7 @@ export default function Campaigns() {
             setShowRemove(false);
             setLoading(true);
 
-            const collections = ['KoukokuAds_Scans', 'KoukokuAds_Following', 'KoukokuAds_Favorites'];
+            const collections = ['KoukokuAds_Scans', 'KoukokuAds_Following', 'KoukokuAds_Favorites', 'KoukokuAds_Views', 'KoukokuAds_Clicks'];
 
             // Loop through collections and delete documents
             for (const collection of collections) {
