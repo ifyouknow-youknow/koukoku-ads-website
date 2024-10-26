@@ -1,6 +1,6 @@
 @media (max-width: 500px) {
     .home-img {
-        height: 70vh;
+        height: 40vh;
         border-radius: 15px;
         object-fit: cover;
         object-position: bottom;
@@ -8,25 +8,49 @@
 
     .home-title {
         padding: 0em 1em;
-        font-size: 10vw;
+        font-size: 14vw;
         font-weight: 600;
         letter-spacing: -2px;
         line-height: 1em;
         text-decoration: underline;
-        text-decoration-color: #4D76FF;
+        text-decoration-color: #676565;
+        word-wrap: break-word;
     }
 
     .home-caption {
+        background-color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
-        font-size: 20px;
-        text-align: center;
-        padding: 6vh 1em;
+        font-size: 30px;
+        text-shadow: 1px 1px 1px #ffffff;
+        padding: 1em;
+        border-radius: 15px;
+        line-height: 1.2em;
+    }
+
+    .home-img-left {
+        position: fixed;
+        height: 250px;
+        width: 180px;
+        left: 0;
+        bottom: 0;
+        object-fit: cover;
+        z-index: -100;
+    }
+
+    .home-img-right {
+        position: fixed;
+        height: 250px;
+        width: 180px;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        z-index: -100;
     }
 }
 
 @media (min-width: 500px) {
     .home-img {
-        height: 80vh;
+        height: 40vh;
         border-radius: 15px;
         object-fit: cover;
         object-position: bottom;
@@ -34,19 +58,48 @@
 
     .home-title {
         padding: 4vh 1em;
-        font-size: 10vw;
+        font-size: 80px;
         font-weight: 600;
         letter-spacing: -2px;
         line-height: 1em;
         text-decoration: underline;
-        text-decoration-color: #4D76FF;
-
+        text-decoration-color: #676565;
+        word-wrap: break-word;
     }
 
     .home-caption {
+        background-color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
         font-size: 20px;
-        text-align: center;
-        padding: 6vh 1em;
+        text-shadow: 1px 1px 1px #ffffff;
+        padding: 1em;
+        border-radius: 15px;
+        line-height: 1.2em;
+    }
+
+    .home-body {
+        max-width: 1000px;
+        margin: 0 auto;
+
+    }
+
+    .home-img-left {
+        position: fixed;
+        height: 400px;
+        width: 280px;
+        left: 0;
+        bottom: 0;
+        object-fit: cover;
+        z-index: -100;
+    }
+
+    .home-img-right {
+        position: fixed;
+        height: 320px;
+        width: 220px;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        z-index: -100;
     }
 }

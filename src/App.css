@@ -62,7 +62,7 @@ p {
 }
 
 .bg-red {
-  background-color: red;
+  background-color: #FF5858;
 }
 
 .bg-blue {
@@ -125,6 +125,7 @@ p {
 .right {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .separate-h {

@@ -1,4 +1,4 @@
-import logo from '../../IMAGES/koukoku-ads-logo.png'
+import logo from '../../IMAGES/logo.png'
 import { Clickable } from './Clickable'
 import { GiHamburgerMenu } from "react-icons/gi";
 import '../../STYLES/DashNavigation.css'

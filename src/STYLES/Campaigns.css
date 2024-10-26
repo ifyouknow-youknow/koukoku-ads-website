@@ -2,17 +2,32 @@
     .camp-wrap {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 4px;
+        width: 100%;
     }
 
     .camp-block {
         background-color: #F6F8FA;
         padding: 1em;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .camp-right {
+        width: 100%;
+    }
+
+    .camp-left {
+        width: 100px;
+        height: 100px;
     }
 
     .camp-title {
-        font-size: 26px;
-        font-weight: 600;
+        font-size: 18px;
+        font-weight: 400;
         color: #4F49FF;
     }
 
@@ -36,8 +51,8 @@
     }
 
     .camp-active {
-        font-size: 14px;
-        padding: 5px 12px;
+        font-size: 12px;
+        padding: 2px 12px;
         background-color: #56f251;
         color: black;
         height: fit-content;
@@ -47,6 +62,7 @@
 
     .camp-exp {
         font-size: 12px;
+        font-weight: 300;
     }
 
     .button-reactivate {
@@ -67,14 +83,16 @@
         border-radius: 100px;
         font-size: 12px;
     }
+
+
 }
 
 @media (min-width: 500px) {
     .camp-wrap {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 1200px;
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        max-width: 1000px;
         margin: 0 auto;
     }
 
@@ -82,18 +100,24 @@
         background-color: #F6F8FA;
         padding: 1em;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 10px;
+        flex-direction: row;
+        gap: 15px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .camp-block-img {
-        display: block;
+    .camp-right {
+        width: 100%;
+    }
+
+    .camp-left {
+        width: 100px;
+        height: 100px;
     }
 
     .camp-title {
-        font-size: 26px;
-        font-weight: 600;
+        font-size: 18px;
+        font-weight: 400;
         color: #4F49FF;
     }
 
@@ -117,8 +141,8 @@
     }
 
     .camp-active {
-        font-size: 14px;
-        padding: 5px 12px;
+        font-size: 12px;
+        padding: 2px 12px;
         background-color: #56f251;
         color: black;
         height: fit-content;
@@ -128,6 +152,7 @@
 
     .camp-exp {
         font-size: 12px;
+        font-weight: 300;
     }
 
     .button-reactivate {
@@ -148,4 +173,6 @@
         border-radius: 100px;
         font-size: 12px;
     }
+
+
 }

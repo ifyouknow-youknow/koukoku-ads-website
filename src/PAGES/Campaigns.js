@@ -74,7 +74,7 @@ export default function Campaigns() {
             setLoading(true);
 
             const collections = ['KoukokuAds_Scans', 'KoukokuAds_Following', 'KoukokuAds_Favorites', 'KoukokuAds_Views', 'KoukokuAds_Clicks'];
-
+            console.log(chosenAd)
             // Loop through collections and delete documents
             for (const collection of collections) {
                 await firebase_GetAllDocumentsQueried(collection, [
@@ -87,13 +87,15 @@ export default function Campaigns() {
             }
 
             // Delete the ad from the 'KoukokuAds_Campaigns' collection
-            await firebase_DeleteDocument('KoukokuAds_Campaigns', chosenAd.id);
+            await firebase_DeleteDocument('KoukokuAds_Campaigns', chosenAd.id, (succecss) => {
+                // Notify user and update UI
+                setLoading(false);
+                alert("Your ad has been removed.");
+                setCampaigns((prev) => prev.filter((ad) => ad.id !== chosenAd.id));
+                setChosenAd({});
+            });
 
-            // Notify user and update UI
-            setLoading(false);
-            alert("Your ad has been removed.");
-            setCampaigns((prev) => prev.filter((ad) => ad.id !== chosenAd.id));
-            setChosenAd({});
+
         } catch (error) {
             console.error("Error removing ad:", error);
             setLoading(false);
@@ -122,41 +124,32 @@ export default function Campaigns() {
                     </div>}
                     {campaigns.length > 0 &&
                         campaigns.map((camp, i) => {
-                            return <div className='camp-block p-h' key={i}>
-                                <div className='camp-block-img'>
-                                    <AsyncImage imagePath={camp.imagePath} objectFit={'fill'} />
+                            return <div className='camp-block'>
+                                <div className='camp-left'>
+                                    <AsyncImage imagePath={camp.imagePath} width={80} height={80} />
                                 </div>
-                                <div style={{ width: "100%" }}>
-                                    <div className='separate-h'>
-                                        <h3 className='camp-title'>{camp.isCoupon ? "Coupon" : "Ad"}</h3>
-                                        {camp.active && <p className='camp-active no'>active</p>}
-                                        {!camp.active && <div className='button-reactivate'>
-                                            <Clickable onPress={() => {
-                                                setChosenAd(camp);
-                                                setShowDialog(true);
-                                            }}>
-                                                <p>Reactivate</p>
-                                            </Clickable>
-                                        </div>}
-                                    </div>
-                                    <p className='camp-text'>{camp.chosenOption} units</p>
-                                    <p className='camp-text'>{camp.views} views</p>
+                                <div className="camp-right">
+                                    <div className="separate-h">
+                                        <p className='camp-title'>{camp.isCoupon ? "Coupon" : "Ad"}</p>
 
-                                    {
-                                        camp.isCoupon && <div className='camp-icon-pair'>
-                                            <div className='camp-icon'>
-                                                <FaRegHandSpock />
-                                            </div>
-                                            <p className='camp-exp'>Exp date: <br />{camp.isCoupon ? formatShortDate(new Date(camp.date)) : ""}</p>
+                                        <div className="camp-active">
+                                            {camp.active ? "active" : 'inactive'}
                                         </div>
-                                    }
-                                    <br />
-                                    <Clickable onPress={() => {
-                                        setChosenAd(camp);
-                                        setShowRemove(true);
-                                    }}>
-                                        <p className='camp-remove'>remove ad <BiTrash /></p>
-                                    </Clickable>
+                                    </div>
+                                    <p className='camp-text'>{camp.chosenOption}</p>
+                                    <Spacer height={15} />
+                                    <div className="separate-h">
+                                        <div>
+                                            <p className='camp-exp'>expires on:</p>
+                                            <p className='camp-exp'>{formatDate(new Date(camp.expDate))}</p>
+                                        </div>
+                                        <Clickable onPress={() => {
+                                            setChosenAd(camp);
+                                            onRemoveAd();
+                                        }}>
+                                            <div className='camp-remove'>Remove</div>
+                                        </Clickable>
+                                    </div>
                                 </div>
                             </div>
                         })
