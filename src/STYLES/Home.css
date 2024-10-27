@@ -20,7 +20,7 @@
     .home-caption {
         background-color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
-        font-size: 30px;
+        font-size: 20px;
         text-shadow: 1px 1px 1px #ffffff;
         padding: 1em;
         border-radius: 15px;
@@ -45,6 +45,35 @@
         bottom: 0;
         object-fit: cover;
         z-index: -100;
+    }
+
+    .home-pair {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .home-ad {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        gap: 15px;
+    }
+
+    .home-block {
+        padding: 1em;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        gap: 15px;
+    }
+
+    .home-head {
+        font-size: 24px;
+        font-weight: 500;
+        padding: 1em;
+    }
+
+    .home-text {
+        font-size: 14px;
     }
 }
 
@@ -101,5 +130,30 @@
         bottom: 0;
         object-fit: cover;
         z-index: -100;
+    }
+
+    .home-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-block {
+        background-color: rgba(255, 255, 255, 0.8);
+        max-width: 400px;
+        padding: 1em;
+        border-radius: 15px;
+    }
+
+    .home-head {
+        font-size: 26px;
+        font-weight: 500;
+        color: #5D23EB;
+    }
+
+    .home-ad {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        border-radius: 10px;
     }
 }
