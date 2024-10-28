@@ -11,11 +11,16 @@ import { CreateAd } from './PAGES/CreateAd';
 import Notifications from './PAGES/Notifications';
 import Campaigns from './PAGES/Campaigns';
 import { Signup } from './PAGES/Signup';
+import { Contact } from './PAGES/Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
   {
     path: "/login",
